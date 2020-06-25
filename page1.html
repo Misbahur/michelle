@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UAS Javascript</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script >
+	function passvalues(){
+		var data=document.getElementById("").value;
+		localStorage.setItem()
+	}
+	
+</script>
+<style type="text/css">
+@import url(//db.onlinewebfonts.com/c/031da03967812d134ed68febd3ba78a9?family=GT+America);
+@import url(//db.onlinewebfonts.com/c/2596224269750e00c3ad5356299a3b9f?family=Ogg);
+	
+body, div {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+	background-color: #E8D5C4;
+	width: 100%;
+	font-family: "GT America";
+	color:#CC8C6E;
+}
+ p{
+ 	font-family: "Ogg", serif;
+ 	color:#CC8C6E;
+ 	font-size: 36px;
+ 	font-weight: bold;
+ }
+
+h1 {
+	font-size: 20px;
+	text-align: justify;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 12px;
+}
+.illus1 img{
+	width: 40%;
+	position: absolute;
+	right: 70px;
+	margin: 15px 15px;
+}
+
+.content {
+	background-color: #EFE5D9;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	margin : 80px 0px 10px 100px;
+	padding: 50px 40px;
+}
+
+.isi{
+	height:100%;
+	overflow: auto;
+	padding-right: 45px;
+	padding-top: 5px;
+}
+
+::-webkit-scrollbar{
+	width:5px;
+	}
+::-webkit-scrollbar-track{
+	background :#E8D5C4;
+	  border-radius: 10px;
+	}
+::-webkit-scrollbar-thumb {
+  background: #CC8C6E; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.logo img{
+	width:150px;
+	position: absolute;
+	margin : 15px 0px 20px 525px;
+}
+
+
+.btn {
+background-color: #CC8C6E;
+color: white;
+font-family: "Ogg", serif;
+}
+
+.btn:hover {background-color: #E8D5C4;}
+
+.btn:active {
+  background-color: #E8D5C4;
+  transform: translateY(6px);
+}
+
+.col-xs-6{
+	padding-left: 0px;
+	padding-right: 64px;
+}
+.form-control{
+	background-color: #EFE5D9;
+	border-color: #E8D5C4;
+}
+
+.container-inline {
+  display: inline-block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-inline input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #C6896C;
+}
+
+.container-inline:hover input ~ .checkmark {
+  background-color: #EDCEB8;
+}
+
+.container-inline input:checked ~ .checkmark {
+  background-color: #C6896C;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container-inline input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-inline .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.email{
+	margin-left: -185px;
+}
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #E8D5C4;
+  border-radius: 50%;
+}
+
+.container2:hover input ~ .checkmark2 {
+  background-color: #D8B8A3;
+}
+
+.container2 input:checked ~ .checkmark2 {
+  background-color: #CC8C6E;
+}
+
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container2 input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+.container2 .checkmark2:after {
+ 	top: 6px;
+	left: 6px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: white;
+}
+#myDIV {
+   width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: none;
+  display: none;
+}
+#myDIV2 {
+   width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: none;
+  display: none;
+}
+
+#myDIV3 {
+   width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: none;
+  display: none;
+}
+</style>
+</head>
+<body>
+	<div class="illus1">
+	<img src="illus1.png"></div>
+	<div class="content">
+	<div class="isi">
+	<p>First, <br>
+	let us know about you.<p>
+	<form><br>
+	<div class="form-group">
+	<label> Full Name </label>
+	<input id="name" type="text" name="" class="form-control" placeholder="Kekeyi">
+	</div>
+	<div class="form-group col-xs-6">
+	<label> Age</label>
+	<input id="age" type="number" name="" class="form-control" placeholder="17">
+	</div>
+	<div class="form-group">
+	<label>Sex</label>
+	<div class="checkbox">
+    <label class="container-inline"><input id="male" type="radio" name="sex" value="Male"> Male
+    <span class="checkmark"></span></label>
+    <label class="container-inline"><input id ="female" type="radio" name="sex" value="Female" > Female
+    <span class="checkmark"></span></label>
+    </div></div>
+    <div class="form-group">
+	<label class="email"> Email</label>
+	<input id="email" type="text" name="" class="form-control" placeholder="youremail@gmail.com">
+	</div><br><br>
+	<p>Tell us about<br>
+	your skin.<p>
+<div class="question1">
+<h1>What's your concern ?</h1>
+<div class="form-check">
+<label class="container2">Breakouts
+    <input type="radio" name="question1" checked value="Breakouts"><span class="checkmark2"></span></label>
+    <label class="container2">Clogged pores
+    <input type="radio" name="question1" value="Clogged Pores"><span class="checkmark2"></span></label>
+    <label class="container2">Dark spots
+    <input type="radio" name="question1" value="Dark spots"><span class="checkmark2"></span></label>
+    <label class="container2">Scars
+    <input type="radio" name="question1" value="Scars"><span class="checkmark2"></span></label>
+    <label class="container2">Wrinkles
+    <input type="radio" name="question1" value="Wrinkles"><span class="checkmark2"></span></label>
+</div></div>
+<div class="question2">
+<h1>What's your skin type ?</h1>
+
+<div class="form-check">
+
+  <label class="container2">Combination
+  <input type="radio" name="question2" value="Combination"><span class="checkmark2"></span></label>
+  <label class="container2">Very dry
+  <input type="radio" name="question2" value="Very dry"><span class="checkmark2"></span></label>
+  <label class="container2">Dry
+  <input type="radio" name="question2" value="Dry"><span class="checkmark2"></span></label>
+  <label class="container2">Oily
+  <input type="radio" name="question2" value="Oily"><span class="checkmark2"></span></label>
+  <label class="container2">Very Oily
+  <input type="radio" name="question2" value="Very Oily"><span class="checkmark2"></span></label>
+  </div>
+
+</div>
+
+<div class="question3">
+    <h1>Do you use sunscreen daily ?</h1>
+    <div class="form-check">
+    <label class="container2">Never
+    <input type="radio" name="question3" value="Never"><span class="checkmark2"></span></label>
+    <label class="container2">Sometimes
+    <input type="radio" name="question3" value="Sometimes"><span class="checkmark2"></span></label>
+    <label class="container2">Always
+    <input type="radio" name="question3" value="Always"><span class="checkmark2"></span></label>
+    </div>
+</div>
+
+<div class="question4">
+    <h1>Any new pimples currently ?</h1>
+    <div class="form-check">
+    <label class="container2">None
+    <input type="radio" name="question4" value="None"><span class="checkmark2"></span></label>
+    <label class="container2">1-3
+    <input type="radio" name="question4" value="1-3"><span class="checkmark2"></span></label>
+    <label class="container2">4-6
+    <input type="radio" name="question4" value="4-6"><span class="checkmark2"></span></label>
+    <label class="container2">7+
+    <input type="radio" name="question4" value="7+"><span class="checkmark2"></span></label>
+    </div>
+</div>
+
+<div class="question5">
+
+    <h1>Do you have any allergies ?</h1>
+    <h2>medications, foods, please mention specific details</h2>
+    <div class="form-check">
+    <label class="container2" onclick="myFunction()">Yes
+    <input type="radio" name="question5" value="yes"><span class="checkmark2"></span></label>
+    <div id="myDIV">
+    <textarea id="question5" class="form-control" rows="4" placeholder="what are you allergic to ? what is your reaction ?" id="allergies"></textarea>
+    </div>
+    <label class="container2">No
+    <input type="radio" name="question5" value="no"><span class="checkmark2"></span></label>
+    </div>
+
+</div>
+
+<div class="question6">
+    <h1>Have you ever used (or currently taking)<br>
+     any prescription ? </h1>
+    <h2>topicals: creams, gel, etc including pills such as birth control</h2>
+    <div class="form-check">
+    <label class="container2" onclick="myFunction2()">Yes
+        <input type="radio" name="question6" value="ya"><span class="checkmark2"></span></label>
+    <div id="myDIV2">
+        <textarea id="question6" class="form-control" name="question6" id="question6" rows="4" placeholder="be specific as possible"></textarea>
+    </div>
+    <label class="container2">No
+    <input type="radio" name="question6" value="no"><span class="checkmark2"></span></label>
+    </div>
+
+</div>
+
+
+<div class="question7">
+
+    <h1>Anything else you'd like to share <br>with us ?</h1>
+    <h2>sensitive skin? any other requests ?<br> or anything related to your skin's journey.</h2>
+    <div class="form-check">
+    <label class="container2" onclick="myFunction3()">I'd like to tell you
+    <input type="radio" name="question7" value="ya"><span class="checkmark2"></span></label>
+    <div id="myDIV3">
+    <textarea class="form-control" rows="4" placeholder="my skin is super sensitive" id='question7'></textarea></div>
+    <label class="container2">Nah i'm good
+    <input type="radio" name="question7" value="Nah i'am god"><span class="checkmark2"></span></label>
+    </div>
+
+</div>
+<br>
+<button id="submit" type="button" class="btn btn-default" onclick="input()">NEXT</a>
+</div>
+</form>
+</div>
+<div class="logo">
+<img src="logo.png"></div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction2() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction3() {
+  var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function input(){
+  var data = {
+    nama: '',
+    age: '',
+    email: '',
+    gender: '',
+    concern: '',
+    skin: '',
+    sunscreen: '',
+    pimples: '',
+    allergies: '',
+    drugs: '',
+    skin_condition: '',
+  };
+
+
+  data['nama'] = document.getElementById('name').value;
+  data['email'] = document.getElementById('email').value;
+  data['age']= document.getElementById('age').value;
+
+
+  var genders  = document.getElementsByName('sex');
+  var radio_question1 = document.getElementsByName('question1');
+  var radio_question2 = document.getElementsByName('question2');
+  var radio_question3 = document.getElementsByName('question3');
+  var radio_question4 = document.getElementsByName('question4');
+  var radio_question5 = document.getElementsByName('question5');
+  var radio_question6 = document.getElementsByName('question6');
+  var radio_question7 = document.getElementsByName('question7');
+
+
+  for (var i =0; i<radio_question1.length; i++){
+    if(radio_question1[i].checked){
+      data['concern'] = radio_question1[i].value;      
+    }
+  }
+
+  for(var i=0; i<genders.length; i++){
+    if(genders[i].checked){
+      data['gender'] = genders[i].value;
+    }
+  }
+
+  for(var i=0; i<radio_question2.length; i++){
+    if(radio_question2[i].checked){
+      data['skin'] = radio_question2[i].value;
+    }
+  }
+
+  for(var i=0; i<radio_question3.length; i++){
+    if(radio_question3[i].checked){
+      data['sunscreen'] = radio_question3[i].value;
+    }
+  }
+
+  for(var i=0; i<radio_question4.length; i++){
+    if(radio_question4[i].checked){
+      data['pimples'] = radio_question4[i].value;
+    }
+  }
+
+  for(var i=0; i<radio_question5.length; i++ ){
+    if(radio_question5[i].checked){
+      if(radio_question5[i].value === "yes"){
+        data['allergies'] = document.getElementById('question5').value;
+       }
+       else{
+        data['allergies'] = radio_question5[i].value;
+       }     
+     }
+}
+
+  for(var i=0; i<radio_question6.length; i++ ){
+    if(radio_question6[i].checked){
+      if(radio_question6[i].value === "ya"){
+        data['drugs'] = document.getElementById('question6').value;
+      }
+      else{
+        data['drugs'] = radio_question6[i].value;
+      }
+    }
+  }
+
+  for(var i=0; i<radio_question7.length; i++){
+    if(radio_question7[i].checked){
+      if(radio_question7[i].value === "ya"){
+        data['skin_condition'] = document.getElementById('question7').value;
+      }
+      else{
+        data['skin_condition'] = radio_question7[i].value;
+      }
+    }
+  }
+
+  var parsing = "";
+ Object.entries(data).forEach(([key, value]) => {
+   parsing += key+"="+value+"&";
+});
+
+ url = "page2.html?"+parsing;
+
+ document.location.href=url;
+
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
+<!-- hais -->

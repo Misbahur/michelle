@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UAS Javascript</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+@import url(//db.onlinewebfonts.com/c/031da03967812d134ed68febd3ba78a9?family=GT+America);
+@import url(//db.onlinewebfonts.com/c/2596224269750e00c3ad5356299a3b9f?family=Ogg);
+  
+body, div {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #E8D5C4;
+  width: 100%;
+  font-family: "GT America";
+  color:#CC8C6E;
+}
+ p{
+  font-family: "Ogg", serif;
+  color:#CC8C6E;
+  font-size: 36px;
+  font-weight: bold;
+ }
+
+h1 {
+  font-size: 20px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 12px;
+}
+.illus1 img{
+  width: 40%;
+  position: absolute;
+  right: 70px;
+  margin: 15px 15px;
+}
+
+.content {
+  background-color: #EFE5D9;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin : 80px 0px 10px 100px;
+  padding: 50px 40px;
+}
+
+.isi{
+  height:100%;
+  overflow: auto;
+  padding-right: 45px;
+  padding-top: 5px;
+}
+
+::-webkit-scrollbar{
+  width:5px;
+  }
+::-webkit-scrollbar-track{
+  background :#E8D5C4;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb {
+  background: #CC8C6E; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.logo img{
+  width:150px;
+  position: absolute;
+  margin : 15px 0px 20px 525px;
+}
+
+
+.btn {
+background-color: #CC8C6E;
+color: white;
+font-family: "Ogg", serif;
+margin-left: 14px;
+}
+
+
+
+.btn:hover {background-color: #E8D5C4;}
+
+.btn:active {
+  background-color: #E8D5C4;
+  transform: translateY(6px);
+}
+
+.col-xs-6{
+  padding-left: 0px;
+  padding-right: 64px;
+}
+.form-control{
+  background-color: #EFE5D9;
+  border-color: #E8D5C4;
+}
+
+.container-inline {
+  display: inline-block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-inline input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #C6896C;
+}
+
+.container-inline:hover input ~ .checkmark {
+  background-color: #EDCEB8;
+}
+
+.container-inline input:checked ~ .checkmark {
+  background-color: #C6896C;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container-inline input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-inline .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.email{
+  margin-left: -185px;
+}
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #E8D5C4;
+  border-radius: 50%;
+}
+
+.container2:hover input ~ .checkmark2 {
+  background-color: #D8B8A3;
+}
+
+.container2 input:checked ~ .checkmark2 {
+  background-color: #CC8C6E;
+}
+
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container2 input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+.container2 .checkmark2:after {
+  top: 6px;
+  left: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+table, th, td {
+  border-bottom: 1px solid #E2D4C3;
+  border-collapse: collapse;
+}
+th{
+  padding: 15px;
+  text-align: left;
+  width:30%;
+}
+
+td{
+padding: 15px;
+  text-align: left;
+
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #EFE5D9;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #E8D5C4;
+  width: 40%;
+  height: 30%;
+}
+
+
+.close {
+  color: #CC8C6E;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #E8D5C4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+  <div class="illus1">
+  <img src="illus1.png"></div>
+  <div class="content">
+  <div class="isi">
+<p>Summary </p>
+
+<table id="display" style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td id="nama"></td>
+  </tr>
+  <tr>
+    <th>Age:</th>
+    <td id="age"></td>
+  </tr>
+  <tr>
+    <th>Sex:</th>
+    <td id='gender'></td>
+  </tr>
+  <tr>
+    <th>Email:</th>
+    <td id="email"></td>
+  </tr>
+  <tr>
+    <th>Concern:</th>
+    <td id="concern"></td>
+  </tr>
+  <tr>
+    <th>Skin type:</th>
+    <td id="skin"></td>
+  </tr>
+  <tr>
+    <th>Sunscreen:</th>
+    <td id="sunscreen"></td>
+  </tr>
+  <tr>
+    <th>Pimples:</th>
+    <td id="pimples"></td>
+  </tr>
+  <tr>
+    <th>Allergies:</th>
+    <td id="allergies"></td>
+  </tr>
+  <tr>
+    <th>Prescription:</th>
+    <td id="drugs"></td>
+  </tr>
+  <tr>
+    <th>Details:</th>
+   <td id="details"></td>
+  </tr>
+</table><br>
+<button id="myBtn" class="btn btn-default">I'M READY</button>
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Just for you.</p>
+    We will sent you a list of customized ingredients to your email, <br>
+    this will take 1x24 hours. Let us know  if there’s any updates<br> from your skin!
+  </div></div>
+</div>
+</div>
+<div class="logo">
+<img src="logo.png"></div>
+
+<script>
+
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+window.onload = function () {
+
+  var data = {};
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        g = {}, tmp;
+    
+    for(var i=0; i<params.length; i++){
+      var tmp=params[i].split('=');
+      var $value = "-";
+      if (String(decodeURI(tmp[1])) !== ""){
+        $value = decodeURI(tmp[1]);
+      }
+      data[tmp[0]] = $value;
+    }
+
+  console.log(data);
+
+  document.getElementById('nama').innerHTML = data['nama'];
+  document.getElementById('age').innerHTML = data['age'];
+  document.getElementById('gender').innerHTML = data['gender'];
+  document.getElementById('email').innerHTML = data['email'];
+  document.getElementById('concern').innerHTML = data['concern'];
+   document.getElementById('skin').innerHTML = data['skin'];
+   document.getElementById('sunscreen').innerHTML = data['sunscreen'];
+   document.getElementById('pimples').innerHTML = data['pimples'];
+   document.getElementById('allergies').innerHTML = data['allergies'];
+   document.getElementById('drugs').innerHTML = data['drugs'];
+   document.getElementById('details').innerHTML = data['skin_condition'];
+
+
+    
+}
+</script>
+</body>
+</html>
+<!-- hais -->
